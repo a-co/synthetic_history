@@ -1,0 +1,60 @@
+<deployer>
+
+    <prototype>
+        <name>shared_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>nu_src</val>
+
+                    <val>cascade_0</val>
+                    <val>storage_0</val>
+                    <val>storage_nat</val>
+
+                    <val>cascade_1</val>
+                    <val>storage_1</val>
+
+                    <val>cascade_2</val>
+                    <val>storage_2</val>
+
+                    <val>waste</val>
+                </prototypes>
+
+                <build_times>
+                    <val>1</val>
+
+                    <val>1</val>
+                    <val>1</val>
+                    <val>1</val>
+
+                    <val>1</val>
+                    <val>1</val>
+
+                    <val>1</val>
+                    <val>1</val>
+
+                    <val>1</val>
+                </build_times>
+
+                <n_build>
+                    <val>1</val>
+
+                    <val>1</val>
+                    <val>1</val>
+                    <val>1</val>
+
+                    <val>1</val>
+                    <val>1</val>
+
+                    <val>1</val>
+                    <val>1</val>
+
+                    <val>1</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+
+    <agent> <name>deployer_shared</name> <prototype>shared_deployer</prototype> </agent>
+</deployer>

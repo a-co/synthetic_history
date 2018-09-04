@@ -1,0 +1,120 @@
+<military>
+
+    <prototype>
+        <name>mil_enrichment</name>
+        <config>
+            <Enrichment>
+                <feed_commod>c_uf6</feed_commod>
+                <feed_recipe>r_natl_u</feed_recipe>
+
+                <swu_capacity>1e100</swu_capacity>
+                <product_commod>c_mil_u_enricht</product_commod>
+
+                <tails_assay>0.003</tails_assay>
+                <tails_commod>c_mil_u_depleted</tails_commod>
+            </Enrichment>
+        </config>
+    </prototype>
+
+    <prototype>
+        <name>mil_str_u_depleted</name>
+        <config>
+            <Storage>
+                <in_commods>
+                    <val>c_mil_u_depleted</val>
+                </in_commods>
+                <out_commods>
+                    <val>c_mil_u_depleted_str</val>
+                </out_commods>
+                <residence_time>0</residence_time>
+            </Storage>
+        </config>
+    </prototype>
+
+    <prototype>
+        <name>mil_uox_fabrication</name>
+        <config>
+            <Storage>
+                <in_recipe>
+                    <val>r_mil_u_enricht</val>
+                </in_recipe>
+                <in_commods>
+                    <val>c_mil_u_enricht</val>
+                </in_commods>
+                <out_commods>
+                    <val>c_mil_uox</val>
+                </out_commods>
+                <residence_time>0</residence_time>
+            </Storage>
+            <throughput>1e100</throughput>
+        </config>
+    </prototype>
+
+    <prototype>
+        <name>mil_lwr</name>
+        <lifetime>960</lifetime>
+        <config>
+            <Reactor>
+                <fuel_inrecipes>  
+                    <val>r_mil_uox</val>
+                    <val>r_mil_mox</val>
+                </fuel_inrecipes>
+                <fuel_outrecipes> 
+                    <val>r_mil_uox_spent</val>
+                    <val>r_mil_mox_spent</val>
+                </fuel_outrecipes>
+                <fuel_incommods>  
+                    <val>c_mil_uox</val>
+                    <val>c_mil_mox</val>
+                </fuel_incommods>
+                <fuel_outcommods> 
+                    <val>c_mil_uox_spent</val>
+                    <val>c_mil_mox_spent</val>
+                </fuel_outcommods>
+                <fuel_prefs>
+                    <val>1</val>
+                    <val>2</val>
+                </fuel_prefs>
+
+
+                <cycle_time>18</cycle_time>
+                <refuel_time>0</refuel_time>
+                <assem_size>29565</assem_size>
+                <n_assem_core>3</n_assem_core>
+                <n_assem_batch>1</n_assem_batch>
+                <power_cap>900</power_cap>
+            </Reactor>
+        </config>
+    </prototype>
+
+    <prototype>
+        <name>mil_str_uox_spent</name>
+        <config>
+            <Storage>
+                <in_commods>
+                    <val>c_mil_uox_spent</val>
+                </in_commods>
+                <out_commods>
+                    <val>c_mil_uox_spent_str</val>
+                </out_commods>
+                <residence_time>60</residence_time>
+            </Storage>
+        </config>
+    </prototype>
+    
+    <prototype>
+        <name>mil_str_mox_spent</name>
+        <config>
+            <Storage>
+                <in_commods>
+                    <val>c_mil_mox_spent</val>
+                </in_commods>
+                <out_commods>
+                    <val>c_mil_mox_spent_str</val>
+                </out_commods>
+                <residence_time>60</residence_time>
+            </Storage>
+        </config>
+    </prototype>
+
+</military>

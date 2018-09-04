@@ -1,0 +1,11 @@
+<simulation xml:base="./"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="header.xml" xpointer="xpointer(//header/*)" />
+
+    <xi:include href="shared.xml" xpointer="xpointer(//shared/*)" />
+    <xi:include href="military.xml" xpointer="xpointer(//military/*)" />
+    <xi:include href="civilian.xml" xpointer="xpointer(//civilian/*)" />
+
+    <xi:include href="scheduler.xml" xpointer="xpointer(//scheduler/*)" />
+</simulation>
