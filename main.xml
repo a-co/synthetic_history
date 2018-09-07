@@ -2,6 +2,8 @@
   xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <xi:include href="header.xml" xpointer="xpointer(//header/*)" />
+    
+    <xi:include href="recipe.xml" xpointer="xpointer(//recipes/*)" />
 
     <xi:include href="shared.xml" xpointer="xpointer(//shared/*)" />
     <xi:include href="military.xml" xpointer="xpointer(//military/*)" />

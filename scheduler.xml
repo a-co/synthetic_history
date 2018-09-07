@@ -1,52 +1,28 @@
-<deployer>
+<scheduler>
 
     <prototype>
         <name>shared_deployer</name>
         <config>
             <DeployInst>
                 <prototypes>
-                    <val>nu_src</val>
+                    <val>mine</val>
 
-                    <val>cascade_0</val>
-                    <val>storage_0</val>
-                    <val>storage_nat</val>
-
-                    <val>cascade_1</val>
-                    <val>storage_1</val>
-
-                    <val>cascade_2</val>
-                    <val>storage_2</val>
-
-                    <val>waste</val>
+                    <val>milling</val>
+                    
+                    <val>conversion</val>
                 </prototypes>
 
                 <build_times>
                     <val>1</val>
 
                     <val>1</val>
-                    <val>1</val>
-                    <val>1</val>
 
-                    <val>1</val>
-                    <val>1</val>
-
-                    <val>1</val>
-                    <val>1</val>
-
-                    <val>1</val>
+                    <val>12</val>
                 </build_times>
 
                 <n_build>
                     <val>1</val>
 
-                    <val>1</val>
-                    <val>1</val>
-                    <val>1</val>
-
-                    <val>1</val>
-                    <val>1</val>
-
-                    <val>1</val>
                     <val>1</val>
 
                     <val>1</val>
@@ -57,4 +33,125 @@
 
 
     <agent> <name>deployer_shared</name> <prototype>shared_deployer</prototype> </agent>
-</deployer>
+    
+    <prototype>
+        <name>civilian_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>civ_enrichment</val>
+
+                    <val>civ_str_u_depleted</val>
+                    
+                    <val>civ_fabrication</val>
+                    
+                    <val>civ_str_u_depleted</val>
+                    
+                    <val>civ_lwr</val>
+                    
+                    <val>civ_str_uox_spent</val>
+                </prototypes>
+
+                <build_times>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </build_times>
+
+                <n_build>
+                    <val>4</val>
+
+                    <val>4</val>
+
+                    <val>4</val>
+
+                    <val>4</val>
+
+                    <val>4</val>
+
+                    <val>4</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+    <agent> <name>deployer_civilian</name> <prototype>civilian_deployer</prototype> </agent>
+
+    <prototype>
+        <name>military_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>mil_enrichment</val>
+
+                    <val>mil_str_u_depleted</val>
+                    
+                    <val>mil_uox_fabrication</val>
+                    
+                    <val>mil_str_u_depleted</val>
+                    
+                    <val>mil_lwr</val>
+                    
+                    <val>mil_str_uox_spent</val>
+
+                    <val>reprocessing</val>
+
+                    <val>mil_str_fiss</val>
+
+                    <val>mil_str_heu_fiss</val>
+                </prototypes>
+
+                <build_times>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </build_times>
+
+                <n_build>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+    <agent> <name>deployer_military</name> <prototype>military_deployer</prototype> </agent>
+
+</scheduler>

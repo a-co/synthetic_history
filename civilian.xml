@@ -4,6 +4,7 @@
         <name>civ_enrichment</name>
         <config>
             <Enrichment>
+                <max_feed_inventory>300000</max_feed_inventory>
                 <feed_commod>c_uf6</feed_commod>
                 <feed_recipe>r_natl_u</feed_recipe>
 
@@ -35,18 +36,16 @@
         <name>civ_fabrication</name>
         <config>
             <Storage>
-                <in_recipe>
-                    <val>r_u_enricht</val>
-                </in_recipe>
+                <max_inv_size>30000</max_inv_size>
+                <in_recipe>r_uox</in_recipe>
                 <in_commods>
                     <val>c_u_enricht</val>
                 </in_commods>
                 <out_commods>
                     <val>c_uox</val>
                 </out_commods>
-                <residence_time>0</residence_time>
+                <residence_time>1</residence_time>
             </Storage>
-            <throughput>1e100</throughput>
         </config>
     </prototype>
 
@@ -55,9 +54,15 @@
         <lifetime>960</lifetime>
         <config>
             <Reactor>
-                <fuel_inrecipes>  <val>r_uox</val></fuel_inrecipes>
-                <fuel_outrecipes> <val>r_uox_spent</val></fuel_outrecipes>
-                <fuel_incommods>  <val>c_uox</val></fuel_incommods>
+                <fuel_inrecipes>  
+                    <val>r_uox</val>
+                </fuel_inrecipes>
+                <fuel_outrecipes> 
+                    <val>r_uox_spent</val>
+                </fuel_outrecipes>
+                <fuel_incommods>  
+                    <val>c_uox</val>
+                </fuel_incommods>
                 <fuel_outcommods> <val>c_uox_spent</val></fuel_outcommods>
 
                 <cycle_time>18</cycle_time>
