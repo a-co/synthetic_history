@@ -17,7 +17,7 @@
 
                     <val>1</val>
 
-                    <val>12</val>
+                    <val>1</val>
                 </build_times>
 
                 <n_build>
@@ -45,39 +45,39 @@
                     
                     <val>civ_fabrication</val>
                     
-                    <val>civ_str_u_depleted</val>
-                    
                     <val>civ_lwr</val>
                     
                     <val>civ_str_uox_spent</val>
+                    
+                    <val>civ_lwr</val>
                 </prototypes>
 
                 <build_times>
-                    <val>1</val>
+                    <val>121</val>
 
-                    <val>1</val>
+                    <val>121</val>
 
-                    <val>1</val>
+                    <val>121</val>
 
-                    <val>1</val>
+                    <val>145</val>
 
-                    <val>1</val>
+                    <val>157</val>
 
-                    <val>1</val>
+                    <val>169</val>
                 </build_times>
 
                 <n_build>
-                    <val>4</val>
+                    <val>1</val>
 
-                    <val>4</val>
+                    <val>1</val>
 
-                    <val>4</val>
+                    <val>1</val>
 
-                    <val>4</val>
+                    <val>1</val>
 
-                    <val>4</val>
+                    <val>1</val>
 
-                    <val>4</val>
+                    <val>1</val>
                 </n_build>
             </DeployInst>
         </config>
@@ -96,46 +96,28 @@
                     
                     <val>mil_uox_fabrication</val>
                     
-                    <val>mil_str_u_depleted</val>
-                    
                     <val>mil_lwr</val>
                     
-                    <val>mil_str_uox_spent</val>
-
                     <val>reprocessing</val>
 
                     <val>mil_str_fiss</val>
-
-                    <val>mil_str_heu_fiss</val>
                 </prototypes>
 
                 <build_times>
-                    <val>1</val>
+                    <val>37</val>
 
-                    <val>1</val>
+                    <val>37</val>
 
-                    <val>1</val>
+                    <val>61</val>
 
-                    <val>1</val>
+                    <val>73</val>
 
-                    <val>1</val>
+                    <val>97</val>
 
-                    <val>1</val>
-
-                    <val>1</val>
-
-                    <val>1</val>
-
-                    <val>1</val>
+                    <val>73</val>
                 </build_times>
 
                 <n_build>
-                    <val>1</val>
-
-                    <val>1</val>
-
-                    <val>1</val>
-
                     <val>1</val>
 
                     <val>1</val>
