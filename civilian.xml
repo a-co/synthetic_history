@@ -5,27 +5,34 @@
         <config>
             <Enrichment>
                 <max_feed_inventory>300000</max_feed_inventory>
-                <feed_commods><val>c_uf6</val></feed_commods>
+                <feed_commods>
+                    <val>uf6</val>
+                    <val>mil_uf6</val>
+                </feed_commods>
+                <feed_commod_prefs>
+                    <val>1</val>
+                    <val>2</val>
+                </feed_commod_prefs>
                 <feed_recipe>r_natl_u</feed_recipe>
 
-                <swu_capacity>1e100</swu_capacity>
-                <product_commod>c_u_enricht</product_commod>
+                <swu_capacity>300000</swu_capacity>
+                <product_commod>civ_leu</product_commod>
 
                 <tails_assay>0.003</tails_assay>
-                <tails_commod>c_u_depleted</tails_commod>
+                <tails_commod>u_dep</tails_commod>
             </Enrichment>
         </config>
     </prototype>
 
     <prototype>
-        <name>civ_str_u_depleted</name>
+        <name>civ_str_u_dep</name>
         <config>
             <Storage>
                 <in_commods>
-                    <val>c_u_depleted</val>
+                    <val>u_dep</val>
                 </in_commods>
                 <out_commods>
-                    <val>c_u_depleted_str</val>
+                    <val>u_dep_str</val>
                 </out_commods>
                 <residence_time>0</residence_time>
             </Storage>
@@ -39,10 +46,10 @@
                 <max_inv_size>30000</max_inv_size>
                 <in_recipe>r_uox</in_recipe>
                 <in_commods>
-                    <val>c_u_enricht</val>
+                    <val>civ_leu</val>
                 </in_commods>
                 <out_commods>
-                    <val>c_uox</val>
+                    <val>uox</val>
                 </out_commods>
                 <residence_time>1</residence_time>
             </Storage>
@@ -61,9 +68,9 @@
                     <val>r_uox_spent</val>
                 </fuel_outrecipes>
                 <fuel_incommods>  
-                    <val>c_uox</val>
+                    <val>uox</val>
                 </fuel_incommods>
-                <fuel_outcommods> <val>c_uox_spent</val></fuel_outcommods>
+                <fuel_outcommods> <val>uox_spent</val></fuel_outcommods>
 
                 <cycle_time>18</cycle_time>
                 <refuel_time>0</refuel_time>
@@ -80,10 +87,10 @@
         <config>
             <Storage>
                 <in_commods>
-                    <val>c_uox_spent</val>
+                    <val>uox_spent</val>
                 </in_commods>
                 <out_commods>
-                    <val>c_uox_spent_str</val>
+                    <val>uox_spent_str</val>
                 </out_commods>
                 <residence_time>60</residence_time>
             </Storage>

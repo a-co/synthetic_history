@@ -41,7 +41,7 @@
                 <prototypes>
                     <val>civ_enrichment</val>
 
-                    <val>civ_str_u_depleted</val>
+                    <val>civ_str_u_dep</val>
                     
                     <val>civ_fabrication</val>
                     
@@ -92,7 +92,7 @@
                 <prototypes>
                     <val>mil_enrichment</val>
 
-                    <val>mil_str_u_depleted</val>
+                    <val>mil_str_u_dep</val>
                     
                     <val>mil_uox_fabrication</val>
                     
