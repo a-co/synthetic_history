@@ -1,0 +1,59 @@
+<recipes>
+
+    <recipe>
+        <name>r_u_ore</name>
+        <basis>atom</basis>
+        <nuclide> <id>922350000</id> <comp>0.0071</comp> </nuclide>
+        <nuclide> <id>922380000</id> <comp>0.9929</comp> </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_natl_u</name>
+        <basis>atom</basis>
+        <nuclide> <id>922350000</id> <comp>0.0071</comp> </nuclide>
+        <nuclide> <id>922380000</id> <comp>0.9929</comp> </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_uox</name>
+        <basis>atom</basis>
+        <nuclide> <id>922350000</id> <comp>0.05</comp> </nuclide>
+        <nuclide> <id>922380000</id> <comp>0.95</comp> </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_uox_spent</name>
+        <basis>atom</basis>
+        <nuclide> <id>922350000</id> <comp>0.01</comp> </nuclide>
+        <nuclide> <id>922380000</id> <comp>0.94</comp> </nuclide>
+        <nuclide> <id>942390000</id> <comp>0.01</comp> </nuclide>
+        <nuclide> <id>952410000</id> <comp>0.001</comp> </nuclide>
+        <nuclide> <id>551350000</id> <comp>0.03</comp> </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_mil_uox</name>
+        <basis>atom</basis>
+        <nuclide> <id>922350000</id> <comp>0.05</comp> </nuclide>
+        <nuclide> <id>922380000</id> <comp>0.95</comp> </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_mil_uox_spent</name>
+        <basis>atom</basis>
+        <nuclide> <id>922350000</id> <comp>0.01</comp> </nuclide>
+        <nuclide> <id>922380000</id> <comp>0.94</comp> </nuclide>
+        <nuclide> <id>942390000</id> <comp>0.01</comp> </nuclide>
+        <nuclide> <id>952410000</id> <comp>0.001</comp> </nuclide>
+        <nuclide> <id>551350000</id> <comp>0.03</comp> </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_mil_heu</name>
+        <basis>atom</basis>
+        <nuclide> <id>922350000</id> <comp>0.90</comp> </nuclide>
+        <nuclide> <id>922380000</id> <comp>0.10</comp> </nuclide>
+    </recipe>
+
+
+</recipes>
