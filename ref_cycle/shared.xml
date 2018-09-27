@@ -6,7 +6,7 @@
             <Source>
                 <outcommod>u_ore</outcommod>
                 <outrecipe>r_u_ore</outrecipe>
-                <throughput>10000000000</throughput>
+                <throughput>600000000</throughput>
                 <inventory_size>1e15</inventory_size>
             </Source>
         </config>
