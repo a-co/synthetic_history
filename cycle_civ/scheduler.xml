@@ -1,0 +1,89 @@
+<scheduler>
+
+    <prototype>
+        <name>shared_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>mine</val>
+
+                    <val>milling</val>
+                    
+                    <val>conversion</val>
+                </prototypes>
+
+                <build_times>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </build_times>
+
+                <n_build>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+
+    <agent> <name>deployer_shared</name> <prototype>shared_deployer</prototype> </agent>
+    
+    <prototype>
+        <name>civilian_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>civ_enrichment</val>
+
+                    <val>civ_str_u_dep</val>
+                    
+                    <val>civ_fabrication</val>
+                    
+                    <val>civ_lwr</val>
+                    
+                    <val>civ_str_uox_spent</val>
+                    
+                    <val>civ_lwr</val>
+                </prototypes>
+
+                <build_times>
+                    <val>121</val>
+
+                    <val>121</val>
+
+                    <val>121</val>
+
+                    <val>145</val>
+
+                    <val>157</val>
+
+                    <val>169</val>
+                </build_times>
+
+                <n_build>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+    <agent> <name>deployer_civilian</name> <prototype>civilian_deployer</prototype> </agent>
+
+
+</scheduler>
