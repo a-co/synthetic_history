@@ -48,6 +48,9 @@
                 <in_commods>
                     <val>civ_leu</val>
                 </in_commods>
+                <in_commod_prefs>
+                    <val>1000</val>
+                </in_commod_prefs>
                 <out_commods>
                     <val>uox</val>
                 </out_commods>

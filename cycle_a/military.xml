@@ -4,33 +4,22 @@
         <name>mil_enrichment</name>
         <config>
             <Enrichment>
-                <max_feed_inventory>9427.222</max_feed_inventory>
+                <max_feed_inventory>4030</max_feed_inventory>
                 <feed_commods>
-                <!--                
-                    <val>civ_leu</val>
-                -->
                     <val>uf6</val>
                 </feed_commods>
                 <feed_commod_prefs>
-                <!--                
-                    <val>1000</val>
-                -->
                     <val>1</val>
                 </feed_commod_prefs>
                 
                 <feed_recipe>r_uox</feed_recipe>
 
-                <swu_capacity>100000</swu_capacity>
+                <swu_capacity>8333</swu_capacity>
                 <product_commod>mil_fiss</product_commod>
 
                 <tails_assay>0.003</tails_assay>
                 <tails_commod>mil_u_dep</tails_commod>
                 
-                <!--                
-                <tails_change_times><val>122</val></tails_change_times>
-                <tails_change_commods><val>mil_uf6</val></tails_change_commods>
-                <tails_change_assay><val>0.0071</val></tails_change_assay>
-                -->
             </Enrichment>
         </config>
     </prototype>
@@ -92,12 +81,12 @@
                 </fuel_prefs>
 
 
-                <cycle_time>3</cycle_time>
+                <cycle_time>4</cycle_time>
                 <refuel_time>0</refuel_time>
-                <assem_size>11000</assem_size>
-                <n_assem_core>3</n_assem_core>
+                <assem_size>14000</assem_size>
+                <n_assem_core>1</n_assem_core>
                 <n_assem_batch>1</n_assem_batch>
-                <power_cap>50</power_cap>
+                <power_cap>0.15</power_cap>
             </Reactor>
         </config>
     </prototype>
