@@ -15,7 +15,7 @@
                 </feed_commod_prefs>
                 <feed_recipe>r_natl_u</feed_recipe>
 
-                <swu_capacity>30000</swu_capacity>
+                <swu_capacity>25000</swu_capacity>
                 <product_commod>civ_leu</product_commod>
 
                 <tails_assay>0.003</tails_assay>
@@ -48,6 +48,9 @@
                 <in_commods>
                     <val>civ_leu</val>
                 </in_commods>
+                <in_commod_prefs>
+                    <val>1000</val>
+                </in_commod_prefs>
                 <out_commods>
                     <val>uox</val>
                 </out_commods>

@@ -1,0 +1,37 @@
+<scheduler_shared>
+
+    <prototype>
+        <name>shared_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>mine</val>
+
+                    <val>milling</val>
+                    
+                    <val>conversion</val>
+                </prototypes>
+
+                <build_times>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </build_times>
+
+                <n_build>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+
+    <agent> <name>deployer_shared</name> <prototype>shared_deployer</prototype> </agent>
+    
+</scheduler_shared>

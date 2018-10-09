@@ -6,8 +6,8 @@
     <xi:include href="recipe.xml" xpointer="xpointer(//recipes/*)" />
 
     <xi:include href="shared.xml" xpointer="xpointer(//shared/*)" />
-    <xi:include href="military.xml" xpointer="xpointer(//military/*)" />
     <xi:include href="civilian.xml" xpointer="xpointer(//civilian/*)" />
 
-    <xi:include href="scheduler.xml" xpointer="xpointer(//scheduler/*)" />
+    <xi:include href="scheduler_civilian.xml" xpointer="xpointer(//scheduler_civ/*)" />
+    <xi:include href="scheduler_shared.xml" xpointer="xpointer(//scheduler_shared/*)" />
 </simulation>
