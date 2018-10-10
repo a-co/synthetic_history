@@ -26,13 +26,13 @@
                     <val>u_ore1</val>
                     <val>u_ore2</val>
                 </feed_commods>
-                <feedbuf_size>1e8</feedbuf_size>
+                <feedbuf_size>2e8</feedbuf_size>
                 <leftover_commod>waste</leftover_commod>
                 <streams>
                     <item>
                         <commod>u_nat</commod>
                         <info>
-                            <buf_size>100000</buf_size>
+                            <buf_size>150000</buf_size>
                             <efficiencies>
                                 <item>
                                     <comp>U</comp> <eff>.99</eff>
@@ -44,7 +44,7 @@
                         </info>
                     </item>
                 </streams>
-                <throughput>1e8</throughput>
+                <throughput>2e8</throughput>
             </Separations>
         </config>
     </prototype>
@@ -59,13 +59,13 @@
                 <feed_commods>
                     <val>u_nat</val>
                 </feed_commods>
-                <feedbuf_size>100000</feedbuf_size>
+                <feedbuf_size>200000</feedbuf_size>
                 <leftover_commod>waste</leftover_commod>
                 <streams>
                     <item>
                         <commod>uf6</commod>
                         <info>
-                            <buf_size>100000</buf_size>
+                            <buf_size>200000</buf_size>
                             <efficiencies>
                                 <item>
                                     <comp>U</comp> <eff>.99</eff>
@@ -74,7 +74,7 @@
                         </info>
                     </item>
                 </streams>
-                <throughput>50000</throughput>
+                <throughput>200000</throughput>
             </Separations>
         </config>
     </prototype>

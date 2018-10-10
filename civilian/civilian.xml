@@ -11,11 +11,11 @@
                 </feed_commods>
                 <feed_commod_prefs>
                     <val>1</val>
-                    <val>2</val>
+                    <val>20</val>
                 </feed_commod_prefs>
                 <feed_recipe>r_natl_u</feed_recipe>
 
-                <swu_capacity>25000</swu_capacity>
+                <swu_capacity>35000</swu_capacity>
                 <product_commod>civ_leu</product_commod>
 
                 <tails_assay>0.003</tails_assay>
