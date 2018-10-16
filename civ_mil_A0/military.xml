@@ -4,7 +4,7 @@
         <name>mil_enrichment</name>
         <config>
             <Enrichment>
-                <max_feed_inventory>4030</max_feed_inventory>
+                <max_feed_inventory>20000</max_feed_inventory>
                 <feed_commods>
                     <val>uf6</val>
                 </feed_commods>

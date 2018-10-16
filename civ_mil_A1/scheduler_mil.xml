@@ -11,10 +11,6 @@
                     
                     <val>mil_uox_fabrication</val>
                     
-                    <val>mil_lwr</val>
-                    
-                    <val>reprocessing</val>
-
                     <val>mil_str_fiss</val>
                 </prototypes>
 
@@ -26,17 +22,9 @@
                     <val>61</val>
 
                     <val>73</val>
-
-                    <val>97</val>
-
-                    <val>73</val>
                 </build_times>
 
                 <n_build>
-                    <val>1</val>
-
-                    <val>1</val>
-
                     <val>1</val>
 
                     <val>1</val>
