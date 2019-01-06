@@ -5,14 +5,7 @@
         <config>
             <Enrichment>
                 <max_feed_inventory>100000</max_feed_inventory>
-                <feed_commods>
-                    <val>uf6</val>
-                    <val>mil_uf6</val>
-                </feed_commods>
-                <feed_commod_prefs>
-                    <val>1</val>
-                    <val>20</val>
-                </feed_commod_prefs>
+                <feed_commod>uf6</feed_commod>
                 <feed_recipe>r_natl_u</feed_recipe>
 
                 <swu_capacity>35000</swu_capacity>
