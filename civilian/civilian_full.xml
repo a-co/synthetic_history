@@ -1,0 +1,423 @@
+<simulation>
+
+    <schematype>flat</schematype>
+    <control>
+        <duration>360</duration>
+        <startmonth>1</startmonth>
+        <startyear>1970</startyear>
+        <explicit_inventory>true</explicit_inventory>
+    </control>
+
+    <archetypes>
+        <spec> 
+            <lib>cycamore</lib> 
+            <name>DeployInst</name>
+        </spec>
+        <spec> 
+            <lib>cycamore</lib>
+            <name>Source</name> 
+        </spec>
+        <spec> 
+            <lib>cycamore</lib>
+            <name>Sink</name> 
+        </spec>
+        <spec> 
+            <lib>cycamore</lib>
+            <name>Storage</name> 
+        </spec>
+        <spec> 
+            <lib>cycamore</lib>
+            <name>Reactor</name> 
+        </spec>
+        <spec> 
+            <lib>cycamore</lib>
+            <name>Separations</name> 
+        </spec>
+        <spec> 
+            <lib>cycamore</lib>
+            <name>Enrichment</name>
+        </spec>
+    </archetypes>
+
+    <recipe>
+        <name>r_u_ore</name>
+        <basis>mass</basis>
+        <nuclide> 
+            <id>922350000</id> 
+            <comp>0.0071</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>922380000</id> 
+            <comp>0.9929</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>120240000</id> 
+            <comp>999</comp> 
+        </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_natl_u</name>
+        <basis>mass</basis>
+        <nuclide> 
+            <id>922350000</id> 
+            <comp>0.0071</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>922380000</id> 
+            <comp>0.9929</comp> 
+        </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_uox</name>
+        <basis>mass</basis>
+        <nuclide> 
+            <id>922350000</id> 
+            <comp>0.05</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>922380000</id> 
+            <comp>0.95</comp> 
+        </nuclide>
+    </recipe>
+    <recipe>
+        <name>r_uox_spent</name>
+        <basis>mass</basis>
+        <nuclide> 
+            <id>922350000</id> 
+            <comp>0.01</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>922380000</id> 
+            <comp>0.94</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>942390000</id> 
+            <comp>0.01</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>952410000</id> 
+            <comp>0.001</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>551350000</id> 
+            <comp>0.03</comp> 
+        </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_mil_uox</name>
+        <basis>mass</basis>
+        <nuclide> 
+            <id>922350000</id> 
+            <comp>0.0071</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>922380000</id> 
+            <comp>0.9929</comp> 
+        </nuclide>
+    </recipe>
+    <recipe>
+        <name>r_mil_uox_spent</name>
+        <basis>mass</basis>
+        <nuclide> 
+            <id>922350000</id> 
+            <comp>0.0071</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>922380000</id> 
+            <comp>0.9919</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>942390000</id> 
+            <comp>0.001</comp> 
+        </nuclide>
+    </recipe>
+
+    <recipe>
+        <name>r_mil_heu</name>
+        <basis>mass</basis>
+        <nuclide> 
+            <id>922350000</id> 
+            <comp>0.90</comp> 
+        </nuclide>
+        <nuclide> 
+            <id>922380000</id> 
+            <comp>0.10</comp> 
+        </nuclide>
+    </recipe>
+    
+
+
+    <prototype>
+        <name>mine</name>
+        <config>
+            <Source>
+                <outcommod>u_ore</outcommod>
+                <outrecipe>r_u_ore</outrecipe>
+                <throughput>1e10</throughput>
+                <inventory_size>1e30</inventory_size>
+            </Source>
+        </config>
+    </prototype>
+
+    <prototype>
+        <name>milling</name>
+        <config>
+            <Separations>
+                <feed_commod_prefs>
+                    <val>1.0</val>
+                    <val>10.0</val>
+                    <val>100.0</val>
+                </feed_commod_prefs>
+                <feed_commods>
+                    <val>u_ore</val>
+                    <val>u_ore1</val>
+                    <val>u_ore2</val>
+                </feed_commods>
+                <feedbuf_size>2e8</feedbuf_size>
+                <leftover_commod>waste</leftover_commod>
+                <streams>
+                    <item>
+                        <commod>u_nat</commod>
+                        <info>
+                            <buf_size>150000</buf_size>
+                            <efficiencies>
+                                <item>
+                                    <comp>U</comp> 
+                                    <eff>.99</eff>
+                                </item>
+                                <item>
+                                    <comp>O</comp> 
+                                    <eff>.99</eff>
+                                </item>
+                            </efficiencies>
+                        </info>
+                    </item>
+                </streams>
+                <throughput>2e8</throughput>
+            </Separations>
+        </config>
+    </prototype>
+    <prototype>
+        <name>conversion</name>
+        <config>
+            <Separations>
+                <feed_commod_prefs>
+                    <val>1.0</val>
+                </feed_commod_prefs>
+                <feed_commods>
+                    <val>u_nat</val>
+                </feed_commods>
+                <feedbuf_size>200000</feedbuf_size>
+                <leftover_commod>waste</leftover_commod>
+                <streams>
+                    <item>
+                        <commod>uf6</commod>
+                        <info>
+                            <buf_size>200000</buf_size>
+                            <efficiencies>
+                                <item>
+                                    <comp>U</comp> 
+                                    <eff>.99</eff>
+                                </item>
+                            </efficiencies>
+                        </info>
+                    </item>
+                </streams>
+                <throughput>200000</throughput>
+            </Separations>
+        </config>
+    </prototype>
+
+    <prototype>
+        <name>civ_enrichment</name>
+        <config>
+            <Enrichment>
+                <max_feed_inventory>100000</max_feed_inventory>
+                <feed_commods>
+                    <val>uf6</val>
+                    <val>mil_uf6</val>
+                </feed_commods>
+                <feed_commod_prefs>
+                    <val>1</val>
+                    <val>20</val>
+                </feed_commod_prefs>
+                <feed_recipe>r_natl_u</feed_recipe>
+
+                <swu_capacity>35000</swu_capacity>
+                <product_commod>civ_leu</product_commod>
+
+                <tails_assay>0.003</tails_assay>
+                <tails_commod>u_dep</tails_commod>
+            </Enrichment>
+        </config>
+    </prototype>
+    <prototype>
+        <name>civ_str_u_dep</name>
+        <config>
+            <Storage>
+                <in_commods>
+                    <val>u_dep</val>
+                </in_commods>
+                <out_commods>
+                    <val>u_dep_str</val>
+                </out_commods>
+                <residence_time>0</residence_time>
+            </Storage>
+        </config>
+    </prototype>
+    <prototype>
+        <name>civ_fabrication</name>
+        <config>
+            <Storage>
+                <max_inv_size>30000</max_inv_size>
+                <in_recipe>r_uox</in_recipe>
+                <in_commods>
+                    <val>civ_leu</val>
+                </in_commods>
+                <in_commod_prefs>
+                    <val>1000</val>
+                </in_commod_prefs>
+                <out_commods>
+                    <val>uox</val>
+                </out_commods>
+                <residence_time>1</residence_time>
+            </Storage>
+        </config>
+    </prototype>
+    <prototype>
+        <name>civ_lwr</name>
+        <lifetime>960</lifetime>
+        <config>
+            <Reactor>
+                <fuel_inrecipes>
+                    <val>r_uox</val>
+                </fuel_inrecipes>
+                <fuel_outrecipes>
+                    <val>r_uox_spent</val>
+                </fuel_outrecipes>
+                <fuel_incommods>
+                    <val>uox</val>
+                </fuel_incommods>
+                <fuel_outcommods> <val>uox_spent</val></fuel_outcommods>
+
+                <cycle_time>18</cycle_time>
+                <refuel_time>0</refuel_time>
+                <assem_size>29565</assem_size>
+                <n_assem_core>3</n_assem_core>
+                <n_assem_batch>1</n_assem_batch>
+                <power_cap>900</power_cap>
+            </Reactor>
+        </config>
+    </prototype>
+    <prototype>
+        <name>civ_str_uox_spent</name>
+        <config>
+            <Storage>
+                <in_commods>
+                    <val>uox_spent</val>
+                </in_commods>
+                <out_commods>
+                    <val>uox_spent_str</val>
+                </out_commods>
+                <residence_time>60</residence_time>
+            </Storage>
+        </config>
+    </prototype>
+
+    <prototype>
+        <name>civilian_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>civ_enrichment</val>
+
+                    <val>civ_str_u_dep</val>
+
+                    <val>civ_fabrication</val>
+
+                    <val>civ_lwr</val>
+
+                    <val>civ_str_uox_spent</val>
+
+                    <val>civ_lwr</val>
+                </prototypes>
+
+                <build_times>
+                    <val>121</val>
+
+                    <val>121</val>
+
+                    <val>121</val>
+
+                    <val>145</val>
+
+                    <val>157</val>
+
+                    <val>169</val>
+                </build_times>
+                <n_build>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+    <agent> 
+        <name>deployer_civilian</name> 
+        <prototype>civilian_deployer</prototype> 
+    </agent>
+
+
+    <prototype>
+        <name>shared_deployer</name>
+        <config>
+            <DeployInst>
+                <prototypes>
+                    <val>mine</val>
+
+                    <val>milling</val>
+
+                    <val>conversion</val>
+                </prototypes>
+
+                <build_times>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </build_times>
+
+                <n_build>
+                    <val>1</val>
+
+                    <val>1</val>
+
+                    <val>1</val>
+                </n_build>
+            </DeployInst>
+        </config>
+    </prototype>
+
+
+    <agent> 
+        <name>deployer_shared</name> 
+        <prototype>shared_deployer</prototype> 
+    </agent>
+
+</simulation>
+
+
